@@ -32,6 +32,7 @@ function comprar() {
 }
 
 function iniciandoSite() {
+    //Incluindo valores de estoque
     document.getElementById("qtd-pista").textContent = "100";
     document.getElementById("qtd-superior").textContent = "200";
     document.getElementById("qtd-inferior").textContent = "400";
