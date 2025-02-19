@@ -4,6 +4,11 @@ function comprar() {
     // Recuperando informação do formulário
     let tipoIngresso = document.getElementById("tipo-ingresso").value;
     let quantidade = parseInt(document.getElementById("qtd").value);
+    
+    // Recuperando o valor dentro do span no HTML
+    let qtdPista = parseInt(document.getElementById("qtd-pista").textContent);
+    let qtdSuperior = parseInt(document.getElementById("qtd-superior").textContent);
+    let qtdInferior = parseInt(document.getElementById("qtd-inferior").textContent);
 
     // Verifica se o tipo de ingresso foi selecionado
     if (tipoIngresso === "") {
@@ -16,11 +21,6 @@ function comprar() {
         alert("Por favor, insira uma quantidade válida maior que zero.");
         return;
     }
-
-    // Recuperando o valor dentro do span no HTML
-    let qtdPista = parseInt(document.getElementById("qtd-pista").textContent);
-    let qtdSuperior = parseInt(document.getElementById("qtd-superior").textContent);
-    let qtdInferior = parseInt(document.getElementById("qtd-inferior").textContent);
 
     // Chama a função condicao e armazena o retorno na variável mensagem
     let mensagem = condicao(tipoIngresso, quantidade, qtdPista, qtdSuperior, qtdInferior);
